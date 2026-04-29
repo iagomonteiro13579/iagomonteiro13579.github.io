@@ -1,16 +1,72 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import MatrixRain from "@/components/MatrixRain";
+import BootScreen from "@/components/BootScreen";
+import SystemNav from "@/components/SystemNav";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import MetricsSection from "@/components/MetricsSection";
+import ContactSection from "@/components/ContactSection";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [entered, setEntered] = useState(false);
+
+  const handleEnter = () => {
+    setEntered(true);
+    requestAnimationFrame(() => {
+      document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" });
+    });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main id="top" className="relative min-h-screen text-matrix-green scan-overlay">
+      <MatrixRain opacity={entered ? 0.18 : 0.4} />
+
+      {/* JSON-LD person */}
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Iago Monteiro dos Santos",
+            jobTitle: "Fullstack Developer",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Florianópolis",
+              addressRegion: "SC",
+              addressCountry: "BR",
+            },
+            email: "mailto:iagomonteiro13579@gmail.com",
+            knowsAbout: [
+              "React",
+              "Node.js",
+              "Python",
+              "SQL",
+              "Linux",
+              "Inteligência Artificial",
+            ],
+          }),
+        }}
+      />
+
+      {!entered ? (
+        <BootScreen onEnter={handleEnter} />
+      ) : (
+        <>
+          <SystemNav />
+          <AboutSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <MetricsSection />
+          <ContactSection />
+        </>
+      )}
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;

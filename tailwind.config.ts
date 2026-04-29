@@ -13,7 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        pixel: ['"Press Start 2P"', 'monospace'],
+        term: ['"VT323"', '"Courier New"', 'monospace'],
+      },
       colors: {
+        matrix: {
+          DEFAULT: 'hsl(var(--matrix-green))',
+          green: 'hsl(var(--matrix-green))',
+          dim: 'hsl(var(--matrix-green-dim))',
+          dark: 'hsl(var(--matrix-green-dark))',
+          black: 'hsl(var(--matrix-black))',
+          bg: 'hsl(var(--matrix-bg))',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
