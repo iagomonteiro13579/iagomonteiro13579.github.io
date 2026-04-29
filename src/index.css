@@ -2,95 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+   MATRIX 8-BIT PORTFOLIO DESIGN SYSTEM
+   All colors HSL. All tokens semantic.
+   ============================================ */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 2%;
+    --foreground: 120 100% 75%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 120 50% 4%;
+    --card-foreground: 120 100% 75%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 2%;
+    --popover-foreground: 120 100% 75%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 135 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 120 60% 10%;
+    --secondary-foreground: 120 100% 75%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 120 30% 8%;
+    --muted-foreground: 120 30% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 135 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 135 100% 25%;
+    --input: 135 100% 25%;
+    --ring: 135 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0px;
 
-    --sidebar-background: 0 0% 98%;
+    /* Matrix specific */
+    --matrix-green: 135 100% 50%;
+    --matrix-green-dim: 135 80% 30%;
+    --matrix-green-dark: 135 100% 12%;
+    --matrix-black: 0 0% 0%;
+    --matrix-bg: 0 0% 2%;
+    --terminal-text: 120 100% 80%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-glow: radial-gradient(circle at center, hsl(135 100% 50% / 0.25), transparent 70%);
+    --gradient-scan: linear-gradient(180deg, transparent 0%, hsl(135 100% 50% / 0.04) 50%, transparent 100%);
+    --gradient-vignette: radial-gradient(ellipse at center, transparent 40%, hsl(0 0% 0% / 0.8) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows / glows */
+    --glow-sm: 0 0 6px hsl(135 100% 50% / 0.7);
+    --glow-md: 0 0 14px hsl(135 100% 50% / 0.8), 0 0 28px hsl(135 100% 50% / 0.4);
+    --glow-lg: 0 0 22px hsl(135 100% 50% / 0.9), 0 0 48px hsl(135 100% 50% / 0.5);
+    --text-glow: 0 0 4px hsl(135 100% 50% / 0.9), 0 0 10px hsl(135 100% 50% / 0.5);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --transition-glitch: all 0.15s steps(3, end);
   }
 }
 
@@ -99,7 +67,220 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'VT323', 'Courier New', monospace;
+    font-size: 18px;
+    background-color: hsl(var(--matrix-bg));
+    background-image:
+      var(--gradient-vignette),
+      repeating-linear-gradient(
+        0deg,
+        hsl(135 100% 50% / 0.03) 0px,
+        hsl(135 100% 50% / 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    overflow-x: hidden;
   }
+
+  ::selection {
+    background: hsl(var(--matrix-green));
+    color: hsl(var(--matrix-black));
+  }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--matrix-black)); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--matrix-green-dim));
+    border: 1px solid hsl(var(--matrix-green));
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--matrix-green)); }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Press Start 2P', 'VT323', monospace;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer components {
+  .font-pixel { font-family: 'Press Start 2P', monospace; }
+  .font-mono-term { font-family: 'VT323', 'Courier New', monospace; }
+
+  .text-glow { text-shadow: var(--text-glow); }
+  .text-glow-strong {
+    text-shadow:
+      0 0 4px hsl(var(--matrix-green)),
+      0 0 12px hsl(var(--matrix-green) / 0.8),
+      0 0 24px hsl(var(--matrix-green) / 0.5);
+  }
+
+  .border-glow { box-shadow: var(--glow-sm); }
+  .border-glow-md { box-shadow: var(--glow-md); }
+
+  /* CRT scanlines overlay */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 2px,
+      hsl(0 0% 0% / 0.25) 3px,
+      hsl(0 0% 0% / 0.25) 4px
+    );
+    z-index: 50;
+  }
+
+  .pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+  .terminal-cursor::after {
+    content: '▊';
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s steps(2) infinite;
+    color: hsl(var(--matrix-green));
+  }
+
+  .hud-panel {
+    background: linear-gradient(180deg, hsl(135 60% 4%) 0%, hsl(0 0% 1%) 100%);
+    border: 1px solid hsl(var(--matrix-green) / 0.5);
+    box-shadow:
+      inset 0 0 20px hsl(var(--matrix-green) / 0.08),
+      0 0 12px hsl(var(--matrix-green) / 0.15);
+    position: relative;
+  }
+  .hud-panel::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    background: linear-gradient(45deg, transparent 48%, hsl(var(--matrix-green)) 50%, transparent 52%);
+    background-size: 6px 6px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .glitch-hover {
+    transition: var(--transition-glitch);
+  }
+  .glitch-hover:hover {
+    text-shadow:
+      2px 0 hsl(0 100% 50% / 0.8),
+      -2px 0 hsl(180 100% 50% / 0.8),
+      0 0 12px hsl(var(--matrix-green));
+    transform: translate(0.5px, -0.5px);
+  }
+
+  .btn-matrix {
+    @apply font-pixel uppercase relative inline-flex items-center justify-center gap-2 px-6 py-3 text-xs;
+    background: hsl(var(--matrix-black));
+    color: hsl(var(--matrix-green));
+    border: 2px solid hsl(var(--matrix-green));
+    box-shadow: var(--glow-sm);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .btn-matrix:hover {
+    background: hsl(var(--matrix-green));
+    color: hsl(var(--matrix-black));
+    box-shadow: var(--glow-lg);
+    transform: translateY(-2px);
+  }
+  .btn-matrix:active { transform: translateY(0); }
+
+  .xp-bar {
+    height: 14px;
+    background: hsl(var(--matrix-green-dark));
+    border: 1px solid hsl(var(--matrix-green));
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 6px hsl(0 0% 0% / 0.8);
+  }
+  .xp-bar-fill {
+    height: 100%;
+    background:
+      linear-gradient(90deg, hsl(135 100% 30%), hsl(135 100% 55%));
+    box-shadow: 0 0 8px hsl(var(--matrix-green));
+    position: relative;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .xp-bar-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 4px,
+      hsl(0 0% 0% / 0.3) 4px,
+      hsl(0 0% 0% / 0.3) 5px
+    );
+  }
+
+  .crt-flicker { animation: flicker 6s infinite; }
+}
+
+@layer utilities {
+  .bg-matrix { background-color: hsl(var(--matrix-bg)); }
+  .text-matrix-green { color: hsl(var(--matrix-green)); }
+  .text-matrix-dim { color: hsl(var(--matrix-green-dim)); }
+  .border-matrix { border-color: hsl(var(--matrix-green)); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.85; }
+  94% { opacity: 1; }
+  96% { opacity: 0.92; }
+  97% { opacity: 1; }
+}
+
+@keyframes glitch-shift {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+@keyframes pixel-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes boot-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-pixel-float { animation: pixel-float 3.5s ease-in-out infinite; }
+.animate-boot-fade { animation: boot-fade 0.6s ease-out both; }
+.animate-glitch { animation: glitch-shift 0.3s steps(3) infinite; }
+.scan-overlay::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, hsl(var(--matrix-green) / 0.4), transparent);
+  animation: scan-line 8s linear infinite;
+  pointer-events: none;
+  z-index: 40;
 }
