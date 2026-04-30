@@ -4,21 +4,21 @@ import { ExternalLink, Folder } from "lucide-react";
 const projects = [
   {
     id: "01",
-    name: "Sistema de Gestão Web",
-    stack: ["React", "Node.js", "SQL"],
+    name: "Plataforma de E-commerce Web",
+    stack: ["React", "JavaScript", "CSS"],
     problem:
-      "Centralizar dados dispersos em planilhas em uma interface única, rápida e auditável.",
-    link: "https://github.com/iagomonteirosantos",
+      "Desenvolver uma aplicação web de e-commerce focada em usabilidade, com navegação dinâmica, organização de produtos e experiência otimizada para o usuário.",
+    link: "https://github.com/iagomonteiro13579/project-tabacaria",
     difficulty: "★★★",
   },
   {
     id: "02",
-    name: "Automação com Python",
-    stack: ["Python", "Linux", "APIs"],
+    name: "Game Web Interativo 2D",
+    stack: ["JavaScript", "HTML", "CSS"],
     problem:
-      "Eliminar tarefas repetitivas — scripts que processam dados e geram relatórios automatizados.",
-    link: "https://github.com/iagomonteirosantos",
-    difficulty: "★★",
+      "Implementar um jogo web interativo focado em lógica de programação, controle de eventos e renderização dinâmica de elementos, simulando mecânicas básicas de jogos em ambiente web.",
+    link: "https://github.com/iagomonteiro13579/ZezinhoGame",
+    difficulty: "★★★",
   },
   {
     id: "03",

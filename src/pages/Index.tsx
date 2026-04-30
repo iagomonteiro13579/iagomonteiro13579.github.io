@@ -20,13 +20,15 @@ const Index = () => {
   };
 
   return (
-    <main id="top" className="relative min-h-screen text-matrix-green scan-overlay">
+    <main
+      id="top"
+      className="relative min-h-screen text-matrix-green scan-overlay"
+    >
       <MatrixRain opacity={entered ? 0.18 : 0.4} />
 
       {/* JSON-LD person */}
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

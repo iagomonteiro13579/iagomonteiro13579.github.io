@@ -25,47 +25,68 @@ const ContactSection = () => (
             href="mailto:iagomonteiro13579@gmail.com"
             className="hud-panel p-4 group hover:border-matrix-green transition-all hover:[box-shadow:var(--glow-md)] glitch-hover"
           >
-            <Mail className="w-5 h-5 mx-auto mb-2 text-matrix-green" aria-hidden />
-            <div className="font-pixel text-[10px] text-matrix-dim mb-1">EMAIL</div>
+            <Mail
+              className="w-5 h-5 mx-auto mb-2 text-matrix-green"
+              aria-hidden
+            />
+            <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+              EMAIL
+            </div>
             <div className="font-mono-term text-sm text-matrix-green break-all">
               iagomonteiro13579@gmail.com
             </div>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/iagomonteirosantos"
+            href="https://www.linkedin.com/in/iago-monteiro-dos-santos-503686240/"
             target="_blank"
             rel="noopener noreferrer"
             className="hud-panel p-4 group hover:border-matrix-green transition-all hover:[box-shadow:var(--glow-md)] glitch-hover"
           >
-            <Linkedin className="w-5 h-5 mx-auto mb-2 text-matrix-green" aria-hidden />
-            <div className="font-pixel text-[10px] text-matrix-dim mb-1">LINKEDIN</div>
+            <Linkedin
+              className="w-5 h-5 mx-auto mb-2 text-matrix-green"
+              aria-hidden
+            />
+            <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+              LINKEDIN
+            </div>
             <div className="font-mono-term text-sm text-matrix-green">
               /in/iagomonteirosantos
             </div>
           </a>
 
           <a
-            href="https://github.com/iagomonteirosantos"
+            href="https://github.com/iagomonteiro13579"
             target="_blank"
             rel="noopener noreferrer"
             className="hud-panel p-4 group hover:border-matrix-green transition-all hover:[box-shadow:var(--glow-md)] glitch-hover"
           >
-            <Github className="w-5 h-5 mx-auto mb-2 text-matrix-green" aria-hidden />
-            <div className="font-pixel text-[10px] text-matrix-dim mb-1">GITHUB</div>
+            <Github
+              className="w-5 h-5 mx-auto mb-2 text-matrix-green"
+              aria-hidden
+            />
+            <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+              GITHUB
+            </div>
             <div className="font-mono-term text-sm text-matrix-green">
               @iagomonteirosantos
             </div>
           </a>
         </div>
 
-        <a href="mailto:iagomonteiro13579@gmail.com" className="btn-matrix glitch-hover">
+        <a
+          href="mailto:iagomonteiro13579@gmail.com"
+          className="btn-matrix glitch-hover"
+        >
           ▶ INICIAR CONEXÃO
         </a>
       </div>
 
       <footer className="mt-16 text-center font-mono-term text-xs text-matrix-dim/70">
-        <div>© {new Date().getFullYear()} IAGO_MONTEIRO.sys — built inside the system_</div>
+        <div>
+          © {new Date().getFullYear()} IAGO_MONTEIRO.sys — built inside the
+          system_
+        </div>
       </footer>
     </div>
   </section>
