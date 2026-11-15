@@ -99,27 +99,27 @@ const ProjectsSection = () => (
             key={p.id}
             className="hud-panel p-5 sm:p-6 group hover:border-matrix-green transition-all hover:translate-y-[-3px] hover:[box-shadow:var(--glow-md)]"
           >
-            <header className="flex items-start justify-between gap-3 mb-4">
-              <div className="flex items-center gap-3 min-w-0">
-                <Folder
-                  className="w-5 h-5 text-matrix-green shrink-0"
-                  aria-hidden
-                />
-                <div className="min-w-0">
-                  <div className="font-pixel text-[11px] text-matrix-dim mb-1">
+            <header className="flex items-start gap-3 mb-4">
+              <Folder
+                className="w-5 h-5 text-matrix-green shrink-0 mt-1"
+                aria-hidden
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between gap-3 mb-1">
+                  <div className="font-pixel text-[11px] text-matrix-dim">
                     STAGE_{p.id}
                   </div>
-                  <h3 className="font-pixel text-sm sm:text-base text-matrix-green text-glow leading-snug whitespace-normal break-words">
-                    {p.name}
-                  </h3>
+                  <span
+                    className="font-pixel text-xs text-matrix-green text-glow whitespace-nowrap shrink-0"
+                    aria-label={`dificuldade ${p.difficulty}`}
+                  >
+                    {p.difficulty}
+                  </span>
                 </div>
+                <h3 className="font-pixel text-sm sm:text-base text-matrix-green text-glow leading-snug whitespace-normal break-words">
+                  {p.name}
+                </h3>
               </div>
-              <span
-                className="font-pixel text-xs text-matrix-green text-glow whitespace-nowrap"
-                aria-label={`dificuldade ${p.difficulty}`}
-              >
-                {p.difficulty}
-              </span>
             </header>
 
             <p className="font-mono-term text-matrix-copy text-lg sm:text-xl leading-relaxed mb-4">
