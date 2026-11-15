@@ -12,7 +12,7 @@ const SectionHeader = ({ phase, title, subtitle }: SectionHeaderProps) => (
       </span>
       <span className="h-px flex-1 bg-gradient-to-r from-matrix-green/80 to-transparent" />
     </div>
-    <h2 className="font-pixel text-xl sm:text-3xl md:text-4xl text-matrix-green text-glow-strong leading-tight">
+    <h2 className="font-pixel text-base min-[360px]:text-xl sm:text-3xl md:text-4xl text-matrix-green text-glow-strong leading-tight">
       {title}
     </h2>
     {subtitle && (

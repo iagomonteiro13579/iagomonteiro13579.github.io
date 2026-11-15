@@ -109,7 +109,7 @@ const ProjectsSection = () => (
                   <div className="font-pixel text-[11px] text-matrix-dim mb-1">
                     STAGE_{p.id}
                   </div>
-                  <h3 className="font-pixel text-sm sm:text-base text-matrix-green text-glow leading-snug truncate">
+                  <h3 className="font-pixel text-sm sm:text-base text-matrix-green text-glow leading-snug whitespace-normal break-words">
                     {p.name}
                   </h3>
                 </div>
