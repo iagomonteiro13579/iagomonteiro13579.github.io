@@ -93,7 +93,7 @@ const ProjectsSection = () => (
         subtitle="Selecione uma fase executável para inspecionar o código-fonte"
       />
 
-      <div className="grid sm:grid-cols-2 gap-5 lg:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
         {projects.map((p) => (
           <article
             key={p.id}
