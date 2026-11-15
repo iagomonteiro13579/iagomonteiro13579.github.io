@@ -10,13 +10,13 @@
 @layer base {
   :root {
     --background: 0 0% 2%;
-    --foreground: 120 100% 75%;
+    --foreground: 120 14% 82%;
 
     --card: 120 50% 4%;
-    --card-foreground: 120 100% 75%;
+    --card-foreground: 120 14% 82%;
 
     --popover: 0 0% 2%;
-    --popover-foreground: 120 100% 75%;
+    --popover-foreground: 120 14% 82%;
 
     --primary: 135 100% 50%;
     --primary-foreground: 0 0% 0%;
@@ -41,10 +41,11 @@
 
     /* Matrix specific */
     --matrix-green: 135 100% 50%;
-    --matrix-green-dim: 135 80% 30%;
+    --matrix-green-dim: 135 28% 68%;
     --matrix-green-dark: 135 100% 12%;
     --matrix-black: 0 0% 0%;
     --matrix-bg: 0 0% 2%;
+    --matrix-copy: 120 14% 82%;
     --terminal-text: 120 100% 80%;
 
     /* Gradients */
@@ -231,6 +232,7 @@
   .bg-matrix { background-color: hsl(var(--matrix-bg)); }
   .text-matrix-green { color: hsl(var(--matrix-green)); }
   .text-matrix-dim { color: hsl(var(--matrix-green-dim)); }
+  .text-matrix-copy { color: hsl(var(--matrix-copy)); }
   .border-matrix { border-color: hsl(var(--matrix-green)); }
 }
 

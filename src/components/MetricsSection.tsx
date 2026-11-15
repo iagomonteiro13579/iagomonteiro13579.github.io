@@ -36,17 +36,17 @@ const MetricCard = ({
   const n = useCount(value, active);
   return (
     <div className="hud-panel p-5 sm:p-6 text-center relative overflow-hidden">
-      <div className="absolute top-2 right-2 font-pixel text-[8px] text-matrix-dim">
+      <div className="absolute top-2 right-2 font-pixel text-[10px] text-matrix-dim">
         ◉ LIVE
       </div>
-      <div className="font-pixel text-[10px] sm:text-xs text-matrix-dim mb-3">
+      <div className="font-pixel text-[11px] sm:text-xs text-matrix-dim mb-3">
         {label}
       </div>
       <div className="font-pixel text-3xl sm:text-5xl text-matrix-green text-glow-strong tabular-nums">
         {n}
         {suffix}
       </div>
-      <div className="mt-3 font-mono-term text-xs sm:text-sm text-matrix-dim">
+      <div className="mt-3 font-mono-term text-sm sm:text-base text-matrix-dim">
         // {note}
       </div>
     </div>
@@ -83,11 +83,11 @@ const MetricsSection = () => {
           ))}
         </div>
 
-        <div className="hud-panel mt-8 p-5 sm:p-6 font-mono-term text-base">
-          <div className="font-pixel text-xs text-matrix-dim mb-3">
+        <div className="hud-panel mt-8 p-5 sm:p-6 font-mono-term text-lg sm:text-xl leading-relaxed">
+          <div className="font-pixel text-sm text-matrix-dim mb-3">
             EVOLUTION_TRACK
           </div>
-          <div className="grid sm:grid-cols-3 gap-4 text-matrix-green">
+          <div className="grid sm:grid-cols-3 gap-4 text-matrix-copy">
             <div>
               <span className="text-matrix-dim">{">"} fase atual:</span>{" "}
               fullstack

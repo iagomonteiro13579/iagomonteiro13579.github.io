@@ -44,8 +44,8 @@ const AboutSection = () => {
           title="SOBRE_MIM.exe"
           subtitle="Acessando registros pessoais..."
         />
-        <div className="hud-panel p-5 sm:p-8 font-mono-term text-base sm:text-lg min-h-[420px]">
-          <div className="text-matrix-dim text-xs mb-4 font-pixel flex justify-between">
+        <div className="hud-panel p-5 sm:p-8 font-mono-term text-lg sm:text-xl leading-relaxed min-h-[420px]">
+          <div className="text-matrix-green text-xs sm:text-sm mb-4 font-pixel flex justify-between">
             <span>~/iago/about</span>
             <span>● REC</span>
           </div>

@@ -15,7 +15,7 @@ const ContactSection = () => (
           ░ ACCESS_GRANTED ░
         </div>
 
-        <p className="font-mono-term text-lg sm:text-xl text-matrix-green/95 mb-8 max-w-2xl mx-auto">
+        <p className="font-mono-term text-lg sm:text-xl text-matrix-copy leading-relaxed mb-8 max-w-2xl mx-auto">
           {'"'}Acesso liberado. Vamos construir soluções inteligentes com dados,
           lógica e tecnologia.{'"'}
         </p>
@@ -29,10 +29,10 @@ const ContactSection = () => (
               className="w-5 h-5 mx-auto mb-2 text-matrix-green"
               aria-hidden
             />
-            <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+            <div className="font-pixel text-[11px] text-matrix-dim mb-1">
               EMAIL
             </div>
-            <div className="font-mono-term text-sm text-matrix-green break-all">
+            <div className="font-mono-term text-base sm:text-lg text-matrix-copy break-all">
               iagomonteiro13579@gmail.com
             </div>
           </a>
@@ -47,10 +47,10 @@ const ContactSection = () => (
               className="w-5 h-5 mx-auto mb-2 text-matrix-green"
               aria-hidden
             />
-            <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+            <div className="font-pixel text-[11px] text-matrix-dim mb-1">
               LINKEDIN
             </div>
-            <div className="font-mono-term text-sm text-matrix-green">
+            <div className="font-mono-term text-base sm:text-lg text-matrix-copy">
               /in/iagomonteirosantos
             </div>
           </a>
@@ -65,10 +65,10 @@ const ContactSection = () => (
               className="w-5 h-5 mx-auto mb-2 text-matrix-green"
               aria-hidden
             />
-            <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+            <div className="font-pixel text-[11px] text-matrix-dim mb-1">
               GITHUB
             </div>
-            <div className="font-mono-term text-sm text-matrix-green">
+            <div className="font-mono-term text-base sm:text-lg text-matrix-copy">
               @iagomonteirosantos
             </div>
           </a>
@@ -82,7 +82,7 @@ const ContactSection = () => (
         </a>
       </div>
 
-      <footer className="mt-16 text-center font-mono-term text-xs text-matrix-dim/70">
+      <footer className="mt-16 text-center font-mono-term text-sm text-matrix-dim/80">
         <div>
           © {new Date().getFullYear()} IAGO_MONTEIRO.sys — built inside the
           system_

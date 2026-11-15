@@ -47,7 +47,7 @@ const ExperienceSection = () => (
               aria-hidden
             />
             <article className="hud-panel p-5 sm:p-6">
-              <div className="flex flex-wrap items-center gap-3 mb-3 font-pixel text-[10px] sm:text-xs">
+              <div className="flex flex-wrap items-center gap-3 mb-3 font-pixel text-[11px] sm:text-xs">
                 <span className="text-matrix-dim">{l.time}</span>
                 <span
                   className={`px-2 py-0.5 border ${
@@ -62,17 +62,17 @@ const ExperienceSection = () => (
               <h3 className="font-pixel text-sm sm:text-base text-matrix-green text-glow leading-snug">
                 {l.role}
               </h3>
-              <p className="font-mono-term text-matrix-dim text-base mt-1">
+              <p className="font-mono-term text-matrix-copy text-lg sm:text-xl font-medium mt-2 leading-snug">
                 {">"} {l.place}
               </p>
-              <p className="font-mono-term text-matrix-green/90 text-base sm:text-lg mt-3">
+              <p className="font-mono-term text-matrix-copy text-lg sm:text-xl leading-relaxed mt-3">
                 {l.detail}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {l.skills.map((s) => (
                   <span
                     key={s}
-                    className="font-pixel text-[9px] sm:text-[10px] px-2 py-1 border border-matrix/50 text-matrix-green bg-matrix-black/50"
+                    className="font-pixel text-[10px] sm:text-[11px] px-2 py-1 border border-matrix/50 text-matrix-green bg-matrix-black/50"
                   >
                     {s}
                   </span>

@@ -14,14 +14,17 @@ const skills = [
     category: "BACKEND",
     items: [
       { label: "Node.js", level: 70, tag: "express · APIs REST" },
-      { label: "SQL", level: 70, tag: "modelagem · queries · joins" },
+      { label: "SQL / Supabase", level: 70, tag: "modelagem · queries · joins" },
+      { label: "n8n", level: 65, tag: "workflows · integrações · automação" },
     ],
   },
   {
     category: "PROGRAMAÇÃO & INFRA",
     items: [
+      { label: "Java", level: 70, tag: "POO · Spring Boot · aplicações" },
       { label: "Python", level: 70, tag: "scripting · automação · data" },
       { label: "Linux", level: 75, tag: "shell · permissões · servidores" },
+      { label: "Docker", level: 55, tag: "Dockerfile · Compose · containers" },
     ],
   },
   {
@@ -49,7 +52,7 @@ const SkillsSection = () => {
                 <h3 className="font-pixel text-xs sm:text-sm text-matrix-green text-glow">
                   ▣ {group.category}
                 </h3>
-                <span className="font-mono-term text-xs text-matrix-dim">
+                <span className="font-mono-term text-sm text-matrix-dim">
                   {group.items.length} STREAM(S)
                 </span>
               </div>

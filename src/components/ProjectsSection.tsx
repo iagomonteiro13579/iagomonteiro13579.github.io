@@ -106,7 +106,7 @@ const ProjectsSection = () => (
                   aria-hidden
                 />
                 <div className="min-w-0">
-                  <div className="font-pixel text-[10px] text-matrix-dim mb-1">
+                  <div className="font-pixel text-[11px] text-matrix-dim mb-1">
                     STAGE_{p.id}
                   </div>
                   <h3 className="font-pixel text-sm sm:text-base text-matrix-green text-glow leading-snug truncate">
@@ -122,7 +122,7 @@ const ProjectsSection = () => (
               </span>
             </header>
 
-            <p className="font-mono-term text-matrix-green/90 text-base mb-4">
+            <p className="font-mono-term text-matrix-copy text-lg sm:text-xl leading-relaxed mb-4">
               {">"} {p.problem}
             </p>
 
@@ -130,7 +130,7 @@ const ProjectsSection = () => (
               {p.stack.map((s) => (
                 <span
                   key={s}
-                  className="font-pixel text-[9px] px-2 py-1 border border-matrix/50 text-matrix-green bg-matrix-black/60"
+                  className="font-pixel text-[10px] sm:text-[11px] px-2 py-1 border border-matrix/50 text-matrix-green bg-matrix-black/60"
                 >
                   {s}
                 </span>
@@ -141,7 +141,7 @@ const ProjectsSection = () => (
               href={p.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-pixel text-[10px] sm:text-xs text-matrix-green border-b border-matrix-green/40 hover:border-matrix-green pb-1 glitch-hover"
+              className="inline-flex items-center gap-2 font-pixel text-[11px] sm:text-xs text-matrix-green border-b border-matrix-green/40 hover:border-matrix-green pb-1 glitch-hover"
             >
               EXEC ./github <ExternalLink className="w-3 h-3" aria-hidden />
             </a>

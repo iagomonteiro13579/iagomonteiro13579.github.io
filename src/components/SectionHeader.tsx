@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 const SectionHeader = ({ phase, title, subtitle }: SectionHeaderProps) => (
   <header className="mb-10 sm:mb-14">
     <div className="flex items-center gap-3 mb-4">
-      <span className="font-pixel text-[10px] sm:text-xs px-2 py-1 border border-matrix bg-matrix-black text-matrix-green text-glow">
+      <span className="font-pixel text-[11px] sm:text-xs px-2 py-1 border border-matrix bg-matrix-black text-matrix-green text-glow">
         {phase}
       </span>
       <span className="h-px flex-1 bg-gradient-to-r from-matrix-green/80 to-transparent" />
@@ -16,7 +16,7 @@ const SectionHeader = ({ phase, title, subtitle }: SectionHeaderProps) => (
       {title}
     </h2>
     {subtitle && (
-      <p className="mt-3 font-mono-term text-base sm:text-lg text-matrix-dim">
+      <p className="mt-3 font-mono-term text-lg sm:text-xl text-matrix-dim leading-relaxed">
         {"> "}{subtitle}
       </p>
     )}

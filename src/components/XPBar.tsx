@@ -37,7 +37,7 @@ const XPBar = ({ label, level, tag }: XPBarProps) => {
       <div className="xp-bar">
         <div className="xp-bar-fill" style={{ width: `${width}%` }} />
       </div>
-      {tag && <p className="text-xs text-matrix-dim font-mono-term">// {tag}</p>}
+      {tag && <p className="text-sm sm:text-base text-matrix-dim font-mono-term">// {tag}</p>}
     </div>
   );
 };

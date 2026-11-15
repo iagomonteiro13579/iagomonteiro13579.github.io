@@ -15,11 +15,11 @@ const SystemNav = () => (
     <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <a
         href="#top"
-        className="font-pixel text-[10px] sm:text-xs text-matrix-green text-glow shrink-0"
+        className="font-pixel text-[11px] sm:text-xs text-matrix-green text-glow shrink-0"
       >
         ◢ IAGO.sys
       </a>
-      <ul className="flex gap-1 sm:gap-3 overflow-x-auto no-scrollbar text-[9px] sm:text-[10px] font-pixel">
+      <ul className="flex gap-1 sm:gap-3 overflow-x-auto no-scrollbar text-[10px] sm:text-[11px] font-pixel">
         {links.map((l) => (
           <li key={l.id}>
             <a

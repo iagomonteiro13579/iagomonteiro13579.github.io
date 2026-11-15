@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import heroPixel from "@/assets/hero-pixel.png";
 
 interface BootScreenProps {
   onEnter: () => void;
@@ -38,8 +37,8 @@ const BootScreen = ({ onEnter }: BootScreenProps) => {
     >
       <div className="w-full max-w-3xl mx-auto">
         {/* Boot log */}
-        <div className="hud-panel p-4 sm:p-6 mb-8 font-mono-term text-base sm:text-lg crt-flicker">
-          <div className="text-matrix-dim text-xs mb-3 font-pixel">SYSTEM BOOT // FLN-SC</div>
+        <div className="hud-panel p-4 sm:p-6 mb-8 font-mono-term text-lg sm:text-xl leading-relaxed crt-flicker">
+          <div className="text-matrix-dim text-xs sm:text-sm mb-3 font-pixel">SYSTEM BOOT // FLN-SC</div>
           {shown.map((line, i) => (
             <div key={i} className="animate-boot-fade text-matrix-green">
               {line}
@@ -51,21 +50,6 @@ const BootScreen = ({ onEnter }: BootScreenProps) => {
         {/* Hero block */}
         {ready && (
           <div className="text-center space-y-6 animate-boot-fade">
-            <div className="relative inline-block">
-              <div
-                className="absolute inset-0 blur-2xl opacity-60"
-                style={{ background: "var(--gradient-glow)" }}
-                aria-hidden
-              />
-              <img
-                src={heroPixel}
-                alt="Avatar pixel art de Iago Monteiro meditando"
-                width={224}
-                height={224}
-                className="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto pixelated animate-pixel-float"
-              />
-            </div>
-
             <div>
               <h1 className="font-pixel text-2xl sm:text-4xl md:text-5xl text-matrix-green text-glow-strong leading-tight">
                 IAGO MONTEIRO
@@ -73,7 +57,7 @@ const BootScreen = ({ onEnter }: BootScreenProps) => {
               <p className="mt-3 font-mono-term text-lg sm:text-xl text-matrix-dim">
                 {"> "}Fullstack Developer · IA em evolução
               </p>
-              <p className="font-mono-term text-sm text-matrix-dim/80">
+              <p className="font-mono-term text-base sm:text-lg text-matrix-dim">
                 Florianópolis · SC · BR
               </p>
             </div>
@@ -86,7 +70,7 @@ const BootScreen = ({ onEnter }: BootScreenProps) => {
               ▶ ENTER THE SYSTEM
             </button>
 
-            <p className="font-mono-term text-xs text-matrix-dim/70 mt-4">
+            <p className="font-mono-term text-sm text-matrix-dim mt-4">
               press button to continue_
             </p>
           </div>
